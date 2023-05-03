@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+	
+	<title>Unicorn Clicker</title>
+	<style>
+		body {
+			background-color: #C9E8FF;
+			font-family: Arial;
+		}
+		
+		#unicorn {
+			width: 200px;
+			height: 200px;
+			background-image: url('unicorn.png');
+			background-size: cover;
+			cursor: pointer;
+			margin: 0 auto;
+			animation: bounce 0.5s ease;
+			animation-fill-mode: both;
+		}
+		
+		#clicks {
+			font-size: 50px;
+			font-weight: bold;
+			color: #4A4A4A;
+			text-align: center;
+			margin-top: 30px;
+			animation: bounce 0.5s ease;
+		}
+		
+		@keyframes bounce {
+			0% { transform: translateY(0); }
+			50% { transform: translateY(-20px); }
+			100% { transform: translateY(0); }
+		}
+	</style>
+</head>
+
+<body>
+	<div id="game">
+		<div id="unicorn"></div>
+		<p id="clicks">0</p>
+	</div>
+</body>
+<script src="script.js"></script>
+</html>

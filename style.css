@@ -1,0 +1,58 @@
+#game {
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-color: #C9E8FF;
+}
+
+#unicorn {
+width: 200px;
+height: 200px;
+background-image: url('unicorn.png');
+background-size: cover;
+cursor: pointer;
+margin: 0 auto;
+animation: bounce 0.5s ease;
+animation-fill-mode: both;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+#clicks {
+font-size: 50px;
+font-weight: bold;
+margin-top: 30px;
+color: #4A4A4A;
+text-align: center;
+font-family: Arial;
+transition: transform 0.2s ease-in-out;
+}
+
+#clicks.clicked {
+color: #C8A2C8;
+animation: color-change 1s;
+  transform: scale(1.2);
+}
+
+@keyframes bounce {
+0% { transform: translateY(0); }
+50% { transform: translateY(-20px); }
+100% { transform: translateY(0); }
+}
+
+@keyframes color-change {
+0% { color: #FFB347; }
+25% { color: #FFD1DC; }
+50% { color: #8A2BE2; }
+75% { color: #20B2AA; }
+100% { color: #C8A2C8; }
+}
+
+#unicorn.clicked {
+  animation: bounce 0.5s ease;
+  animation-fill-mode: both;
+}
